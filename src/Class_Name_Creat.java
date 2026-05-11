@@ -1,5 +1,3 @@
-package SWITCH;
-
 import java.util.Scanner;
 
 public class Class_Name_Creat {
