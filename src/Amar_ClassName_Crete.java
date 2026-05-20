@@ -14,6 +14,9 @@ public class Amar_ClassName_Crete {
             else if(str.charAt(i)=='.' && Character.isWhitespace(str.charAt(i+1))){
                 sb.append("");
             }
+            else if(str.charAt(i)=='-'){
+                sb.append("_");
+            }
             else {
                 sb.append(str.charAt(i));
             }
