@@ -7,17 +7,14 @@ public class Amar_ClassName_Crete {
         StringBuilder sb = new StringBuilder();
         if(str.charAt(0)>='0' && str.charAt(0)<='9')sb.append("_");
         int i = 0;
-        for(i=0;i<str.length();i++){
-            if(Character.isWhitespace(str.charAt(i))){
+        for ( i = 0; i < str.length(); i++) {
+            if (Character.isWhitespace(str.charAt(i))) {
                 sb.append("_");
-            }
-            else if(str.charAt(i)=='.' && Character.isWhitespace(str.charAt(i+1))){
-                sb.append("");
-            }
-            else if(str.charAt(i)=='-'){
+            } else if (str.charAt(i) == '.') {
+                continue;   // Remove dot
+            } else if (str.charAt(i) == '-') {
                 sb.append("_");
-            }
-            else {
+            } else {
                 sb.append(str.charAt(i));
             }
         }
