@@ -186,12 +186,7 @@ class AccountManager {
             List<Transactionn> txs = entry.getValue();
             // Sort by timestamp
 //            txs.sort((a, b) -> Math.toIntExact(a.timestampSec - b.timestampSec));
-//            Collections.sort(txs, new Comparator<Transactionn>() {
-//                @Override
-//                public int compare(Transactionn t1, Transactionn t2) {
-//                    return Double.compare(t1.timestampSec, t2.timestampSec);
-//                }
-//            });
+
             txs.sort(Comparator.comparingLong(t -> t.timestampSec));
             int left = 0;
             for (int right = 0; right < txs.size(); right++) {
